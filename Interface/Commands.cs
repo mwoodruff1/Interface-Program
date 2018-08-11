@@ -18,7 +18,7 @@ namespace Interface
 
         //Start Mail Commands
         internal void SendMail(){
-            
+            Console.WriteLine("Test hello World");
         }
 
 
