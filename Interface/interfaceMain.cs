@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace Interface
 {
-    class interfaceMain
+    class InterfaceMain
     {
         public string rootUsername = "admin";
         public string rootPassword = "password";

@@ -6,7 +6,7 @@ namespace Interface
         internal void CommandReader(string userInput)
         {
             Commands commandsStorage = new Commands();
-            interfaceMain interfaceMain1 = new interfaceMain();
+            InterfaceMain interfaceMain1 = new InterfaceMain();
             var inputFromUser = userInput;
 
 
