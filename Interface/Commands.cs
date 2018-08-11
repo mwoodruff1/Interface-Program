@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Mail;
+using ActiveUp.Net.Mail;
 namespace Interface
 {
     public class Commands
@@ -27,7 +28,7 @@ namespace Interface
             message.From = new MailAddress("systeminterface01@gmail.com");
             Console.WriteLine("Pleas enter message body");
             message.Body = Console.ReadLine();
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
             smtp.UseDefaultCredentials = false;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.EnableSsl = true;
