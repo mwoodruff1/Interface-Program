@@ -17,8 +17,22 @@ namespace Interface
 
 
         //Start Mail Commands
-        internal void SendMail(){
-            Console.WriteLine("Test hello World");
+        internal void SendMail(/*string toUser, string messageSubject, string messageBody*/){
+            
+            MailMessage message = new MailMessage();
+            Console.WriteLine("Please enter the destination user");
+            message.To.Add(Console.ReadLine());
+            Console.WriteLine("Pleas enter Subject");
+            message.Subject = Console.ReadLine();
+            message.From = new MailAddress("systeminterface01@gmail.com");
+            Console.WriteLine("Pleas enter message body");
+            message.Body = Console.ReadLine();
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.UseDefaultCredentials = false;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.EnableSsl = true;
+            smtp.Credentials = new System.Net.NetworkCredential("systeminterface01@gmail.com", "Max1Oreo2");
+            smtp.Send(message);
         }
 
 
