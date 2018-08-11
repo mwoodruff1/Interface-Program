@@ -1,0 +1,39 @@
+﻿Created by Matthew Woodruff 8-4-18
+
+##########################
+###Overall Project Goal###
+##########################
+
+
+To make a natural language interface in basic terms. Use concepts such as JARVIS and FRIDAY and create a basic version of those. 
+You can also take examples from Microsoft's Cortana, Google's Assistant, and Apple's Siri. 
+
+
+###########################
+###Ideas for the Project###
+###########################
+
+
+Lets start off with a basic user interface. The most basic I can think of is a basic version of the bash shell that Linux uses.
+Then moving forward I can add support for user interaction through text, and/or voice.
+
+
+############################
+###Possible Things to Add###
+############################
+
+
+Voice Interface
+
+
+###################
+###Things to Add###
+###################
+
+
+Basic implementation of the Linux Bash Shell
+
+
+#################################
+###Things that have been added###
+#################################
