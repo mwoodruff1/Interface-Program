@@ -25,6 +25,8 @@ namespace Interface
                     break;
                 case "getmail":
                     commandsStorage.GetMail();
+                    Console.WriteLine("Please Press enter to continue");
+                    Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("An Error has Occured");

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Mail;
-using ActiveUp.Net.Mail;
+
 namespace Interface
 {
     public class Commands
@@ -37,23 +37,9 @@ namespace Interface
         }
 
         internal void GetMail(){
-            var mailRepository = new MailSystem("imap.gmail.com", 993, true, "systeminterface01@gmail.com", "Max1Oreo2");
-                            
+            MailSystem mail = new MailSystem();
 
-            var emailList = mailRepository.GetAllMails("inbox");
-
-            foreach (Message email in emailList)
-            {
-                Console.WriteLine("<p>{0}: {1}</p><p>{2}</p>", email.From, email.Subject, email.BodyHtml.Text);
-                if (email.Attachments.Count > 0)
-                {
-                    foreach (MimePart attachment in email.Attachments)
-                    {
-                        Console.WriteLine("<p>Attachment: {0} {1}</p>", attachment.ContentName, attachment.ContentType.MimeType);
-                    }
-                }
-            }
-
+            mail.get();
         }
 
 
