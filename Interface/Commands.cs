@@ -23,10 +23,10 @@ namespace Interface
             MailMessage message = new MailMessage();
             Console.WriteLine("Please enter the destination user");
             message.To.Add(Console.ReadLine());
-            Console.WriteLine("Pleas enter Subject");
+            Console.WriteLine("Please enter Subject");
             message.Subject = Console.ReadLine();
             message.From = new MailAddress("systeminterface01@gmail.com");
-            Console.WriteLine("Pleas enter message body");
+            Console.WriteLine("Please enter message body");
             message.Body = Console.ReadLine();
             System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
             smtp.UseDefaultCredentials = false;
@@ -40,6 +40,15 @@ namespace Interface
             MailSystem mail = new MailSystem();
 
             mail.get();
+        }
+        internal void hostname(){
+
+            Console.WriteLine(System.Net.Dns.GetHostName().ToString());//Added the .ToString() call incase of future failures.
+
+        }
+        internal void jobs(){
+
+            Console.WriteLine(System.Diagnostics.Process.GetProcesses().ToString());//TODO: FIX THIS FUNCTION
         }
 
 

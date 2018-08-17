@@ -36,7 +36,7 @@ namespace Interface
         public static void Main()
         {
         Link:
-            Console.Clear();
+         //   Console.Clear();
             Startup();
             CommandSender();
             goto Link;
