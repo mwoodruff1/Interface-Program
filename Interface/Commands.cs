@@ -47,9 +47,16 @@ namespace Interface
 
         }
         internal void jobs(){
-
-            Console.WriteLine(System.Diagnostics.Process.GetProcesses().ToString());//TODO: FIX THIS FUNCTION
+            
+            System.Diagnostics.Process[] systemProccesses = System.Diagnostics.Process.GetProcesses();
+            foreach(System.Diagnostics.Process processes in systemProccesses){
+                Console.WriteLine("Process: {0} ID: {1}", processes.ProcessName, processes.Id);
+            }
+            systemProccesses.Close();//Closes the process after it is used
+            Console.WriteLine("Press ENTER to continue.");
+            Console.ReadKey();
         }
+
 
 
 
