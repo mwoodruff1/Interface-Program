@@ -24,6 +24,7 @@ namespace Interface
             OpenPop.Mime.MessagePart plainText = message.FindFirstPlainTextVersion();
             builder.Append(plainText.GetBodyAsText());
             Console.WriteLine(builder.ToString());
+            builder.Clear();
             client.Disconnect();
         
         }

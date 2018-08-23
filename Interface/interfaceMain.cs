@@ -35,9 +35,10 @@ namespace Interface
         //WARNING Main class is below
         public static void Main()
         {
-        Link:
-         //   Console.Clear();
+        
+            Console.Clear();
             Startup();
+            Link:
             CommandSender();
             goto Link;
         }

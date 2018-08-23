@@ -44,7 +44,7 @@ namespace Interface
         internal void hostname(){
 
             Console.WriteLine(System.Net.Dns.GetHostName().ToString());//Added the .ToString() call incase of future failures.
-
+            
         }
         internal void jobs(){
             
